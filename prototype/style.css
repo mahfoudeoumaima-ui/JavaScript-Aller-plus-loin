@@ -1,0 +1,67 @@
+/* --- Reset --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* --- Fond multiple avec grille --- */
+.background-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  grid-template-rows: repeat(2, 50vh);   /* 2 lignes */
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.background-grid .bg {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay pour lisibilité */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent noir */
+  z-index: 1;
+}
+
+/* Contenu principal */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+/* Barre de recherche */
+.search input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  margin-right: 0.5rem;
+}
+
+.search button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+/* Résultats météo */
+.weather-result {
+  margin-top: 2rem;
+}
