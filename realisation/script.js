@@ -57,7 +57,7 @@ fetch("prouduits.json")
         let resultat = tousProduits.filter(p => {
             let nomOK = p.nom.toLowerCase().includes(mot);
             let catOK = cat === "" || p.categorie === cat;
-            let prixOK = isNaN(prixMax) || p.prix <= prixMax; 
+            let prixOK = isNaN(prixMax) || p.prix == prixMax; 
             return nomOK && catOK && prixOK;
 
             
